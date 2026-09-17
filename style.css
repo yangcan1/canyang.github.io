@@ -1,0 +1,69 @@
+/* 配色沿用周易站点：墨绿 + 赭石 + 暖纸白，浅色与深色各有一套。 */
+:root {
+  --paper: #fffdf8;
+  --ink: #283a35;
+  --link: #306359;
+  --accent: #b2583d;
+  --muted: #64736e;
+  --border: #dcded7;
+  --panel: #f2f4ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #172521;
+    --ink: #e4ece7;
+    --link: #acd1b9;
+    --accent: #efb49a;
+    --muted: #a8bbb0;
+    --border: #3e5549;
+    --panel: #1e3029;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+}
+main { max-width: 38rem; margin: 0 auto; padding: 4.5rem 1.5rem 3rem; }
+
+h1, h2 {
+  font-family: "Songti SC", "Noto Serif CJK SC", "SimSun", serif;
+  letter-spacing: .025em;
+}
+h1 { font-size: 2rem; font-weight: 650; margin: 0; }
+h2 {
+  font-size: 1rem;
+  font-weight: 650;
+  margin: 3rem 0 1rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.intro .lede { color: var(--muted); margin: .6rem 0 0; }
+
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+
+.projects { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.projects > li {
+  padding: 1.1rem 1.2rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: .4rem;
+}
+.projects > li > a { font-weight: 650; }
+.projects p { margin: .35rem 0 0; font-size: .92rem; }
+.projects .meta { color: var(--muted); font-size: .82rem; }
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+  font-size: .88rem;
+}
