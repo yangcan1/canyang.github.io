@@ -26,7 +26,11 @@ context, such as HTTPS or localhost.
 
 ## GitHub Pages
 
-The site is served as static files. Publish changes through the branch and
-directory configured under the repository's **Settings → Pages**. Keep
-`index.html` and its referenced assets in that publishing directory; no build
-command is required.
+The site is served as static files. In **Settings → Pages**, set the publishing
+source to **GitHub Actions**. The workflow in `.github/workflows/pages.yml`
+publishes the website whenever changes are pushed to `main`; no build command
+is required. You can also run **Deploy GitHub Pages** manually from **Actions**.
+
+The deployment includes only `index.html`, `style.css`, `script.js`,
+`assets/`, and `.nojekyll`. After a push, check the workflow's deployment result
+before refreshing the live site.
