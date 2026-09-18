@@ -34,7 +34,7 @@ jobs:
       - name: Prepare public website files
         run: |
           mkdir -p "$RUNNER_TEMP/site"
-          cp index.html style.css script.js .nojekyll "$RUNNER_TEMP/site/"
+          cp index.html style.css .nojekyll "$RUNNER_TEMP/site/"
           cp -R assets "$RUNNER_TEMP/site/assets"
       - name: Upload website
         uses: actions/upload-pages-artifact@v5

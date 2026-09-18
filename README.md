@@ -1,8 +1,8 @@
 # Can Yang — Personal Website
 
-An English portfolio featuring Can Yang's interests in computer science,
-selected projects, and education. Built with plain HTML, CSS, and JavaScript;
-there are no dependencies or build steps.
+Plain HTML and CSS, no JavaScript, no build step. Scroll effects use CSS
+scroll-driven animations; browsers without them, and readers who prefer
+reduced motion, get the same page laid out flat.
 
 ## Local preview
 
@@ -16,13 +16,11 @@ Open <http://localhost:8000> in your browser. Stop the server with `Ctrl+C`.
 
 ## Editing
 
-- `index.html`: page content, project links, education, and contact details.
-- `style.css`: layout, colors, typography, and responsive styles.
-- `script.js`: active navigation and the optional copy-email button.
-
-All content and navigation remain available without JavaScript. The copy-email
-button appears only when the browser supports the Clipboard API in a secure
-context, such as HTTPS or localhost.
+- `index.html`: all page content — hero, statement, project, education, contact.
+- `style.css`: layout, colors, typography, scroll-driven animation, responsive
+  and print styles.
+- `assets/`: favicon and the hero portrait. Replace `photo-placeholder.svg`
+  with a real photo and update the `<img>` `src` and `alt` in `index.html`.
 
 ## GitHub Pages
 
@@ -31,6 +29,6 @@ source to **GitHub Actions**. The workflow in `.github/workflows/pages.yml`
 publishes the website whenever changes are pushed to `main`; no build command
 is required. You can also run **Deploy GitHub Pages** manually from **Actions**.
 
-The deployment includes only `index.html`, `style.css`, `script.js`,
-`assets/`, and `.nojekyll`. After a push, check the workflow's deployment result
-before refreshing the live site.
+The deployment includes only `index.html`, `style.css`, `assets/`, and
+`.nojekyll`. After a push, check the workflow's deployment result before
+refreshing the live site.
